@@ -8,7 +8,7 @@ pipeline {
     }
 
     environment {
-        IMAGE_PREFIX = "ganesh6498"
+        IMAGE_PREFIX = "saiteja562"
         DEPLOY_YAML = "deployment.yaml"
        
     }
@@ -59,7 +59,7 @@ pipeline {
 
         stage('Push to Branch') {
     steps {
-        withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
+        withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
     script {
         sh """
     
